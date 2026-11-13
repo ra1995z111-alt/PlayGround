@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#171a19" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23171917'/%3E%3Cpath d='M34 5 13 36h15l-3 23 27-34H36z' fill='%23d89148'/%3E%3C/svg%3E" />
+  <title>EMBER LINE — Stalingrad, 1942</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DWcH8rO3.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DhyQ1SVs.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game"></canvas>
+    <div class="film-grain"></div>
+    <div class="vignette"></div>
+    <section id="title-card" class="title-card">
+      <div class="topline"><span>VOLGA FRONT · 1942</span><span>FIELD DISPATCH 07</span></div>
+      <div class="title-rule"></div>
+      <div class="eyebrow">A CITY BECOMES A FORTRESS</div>
+      <h1>EMBER<br><i>LINE</i></h1>
+      <p class="intro">STALINGRAD, OCTOBER 1942</p>
+      <div class="briefing"><span class="brief-mark">✣</span><span>Reach the factory square. Secure the radio post.<br>Hold the line until the signal goes through.</span></div>
+      <button id="deploy" class="deploy"><span>DEPLOY TO THE RUINS</span><b>→</b></button>
+      <div class="controls-note">W A S D &nbsp; MOVE <span>·</span> MOUSE / TOUCH &nbsp; LOOK <span>·</span> CLICK / SPACE &nbsp; FIRE</div>
+      <div class="title-bottom"><span>VOLGA MILITIA</span><span>NO. 14 / 62</span></div>
+    </section>
+    <section id="hud" class="hud hidden">
+      <header class="hud-top">
+        <div class="mission"><div class="mission-kicker"><span class="live-dot"></span> FIELD ORDER <span>·</span> 14 OCT 1942</div><div class="mission-name">THE RADIO MUST LIVE</div><div class="mission-sub">ADVANCE TO THE FACTORY SQUARE</div></div>
+        <div class="sector"><span>SECTOR</span><b>RED OCTOBER</b><small>STALINGRAD · 51°31′N</small></div>
+      </header>
+      <div class="objective"><div class="objective-icon">✣</div><div><small>PRIMARY OBJECTIVE <span id="objective-count">01 / 03</span></small><b id="objective-text">SECURE THE RADIO POST</b><div class="objective-progress"><i id="objective-progress"></i></div></div></div>
+      <div class="threat" id="threat"><span class="threat-icon">!</span> HOSTILE IN THE AREA</div>
+      <footer class="hud-bottom">
+        <div class="health-wrap"><div class="health-label"><span>VITALS</span><b id="health-value">100</b></div><div class="health-bar"><i id="health-bar"></i></div><div class="status-label">FIELD-DRESSING <span>OK</span></div></div>
+        <div class="ammo"><div class="ammo-count"><b id="ammo-value">05</b><span>/ 30</span></div><small>SVT-40 · 7.62×54R</small><div class="reload-hint" id="reload-hint">R — RELOAD</div></div>
+        <div class="compass"><div class="compass-ticks">·······</div><b>N <span id="heading">034</span>°</b><small>VOLGA · EAST</small></div>
+      </footer>
+      <div class="reticle"><i></i><b></b><i></i></div>
+      <div id="hit-marker" class="hit-marker">×</div>
+      <div id="toast" class="toast"></div>
+    </section>
+    <div id="touch-controls" class="touch-controls hidden">
+      <div id="stick-zone" class="stick-zone"><div id="stick-base"><div id="stick-knob"></div></div></div>
+      <div class="touch-actions"><button id="touch-reload" class="touch-reload">↻</button><button id="touch-fire" class="touch-fire">FIRE</button></div>
+    </div>
+    <div id="end-card" class="end-card hidden"><div class="end-kicker">FIELD REPORT · VOLGA FRONT</div><h2 id="end-title">SIGNAL SENT</h2><p id="end-copy">The line held. The city still stands.</p><button id="restart">RETURN TO THE FRONT</button></div>
+  </main>
+</body>
+</html>
